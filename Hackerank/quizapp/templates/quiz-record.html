@@ -1,0 +1,31 @@
+{%extends 'index.html'%}
+{%block body%}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-0"></div>
+        <div class="col-12">
+        <table class="table table-striped">
+            <tr>
+              <th>Total mark</th>
+              <th>Right Answer Count</th>
+              <th>Wrong answer count</th>
+              <th>Date</th>
+              
+            </tr>
+            {%for r in records%}
+             <tr>
+                 <td>{{r.total_mark}}</td>
+                 <td>{{r.right_answer_count}}</td>
+                 <td>{{r.wrong_answer_count}}</td>
+                 <td>{{r.date}}</td>
+                 
+                 
+                 
+             </tr>
+            {%endfor%}
+        </table>
+        </div>
+        <div class="col-0"></div>
+    </div>
+
+{%endblock%}

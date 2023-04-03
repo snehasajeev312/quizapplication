@@ -1,0 +1,32 @@
+{%extends 'index.html'%}
+{%block body%}
+<div class="container">
+    <div class="row  ">
+        <div class="col-0"></div>
+        <div class="col-12 shadow p-3  ">
+            <form action="" method="post">
+                {%csrf_token%}
+                <label for="id_category" class="form-text">Select a category</label>
+                <select name="category" id="id_category" class="form-select  mb-2">
+                    {%for cat in cats%}
+                    <option value="{{cat.name}}">{{cat.name}}</option>
+
+                    {%endfor%}
+
+                </select>
+                <label for="id_mode" class="form-text">Select a mode</label>
+                <select name="mode" id="id_mode" class="form-select  mb-2">
+                <option value="easy">easy</option>
+                <option value="medium">medium</option>
+                <option value="hard">hard</option>
+                </select>
+                <div class="text-center">
+                    <input type="submit" value="lets start" class="btn btn-outline-success"> 
+                </div>
+                
+            </form>
+        </div>
+        <div class="col-0"></div>
+    </div>
+</div>
+{%endblock%}

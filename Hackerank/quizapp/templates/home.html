@@ -1,0 +1,6 @@
+{%extends 'index.html'%}
+{%block body%}
+<h1>Welcome {{request.user}}</h1>
+    <a href="{%url 'quiz-home'%}" class="btn btn-info">Start Quiz</a>
+    <a href="{%url 'quiz-record'%}" class="btn btn-info">History</a>
+{%endblock%}
